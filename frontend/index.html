@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.8/angular-material.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+    <title>Document</title>
+</head>
+<body ng-app='appUser' ng-cloak>
+   
+<div ng-controller="userController">
+    <div layout-gt-sm="row">
+        <md-input-container class="md-block" flex-gt-sm>
+          <label>First name</label>
+          <input ng-model="p.firstname">
+        </md-input-container>
+
+        <md-input-container class="md-block" flex-gt-sm>
+          <label>Long Last Name That Will Be Truncated And 3 Dots (Ellipsis) Will Appear At The End</label>
+          <input ng-model="p.lastname">
+        </md-input-container>
+
+        <md-input-container>
+            <label>Email</label>
+            <input ng-model="p.email" type="email">
+      </md-input-container>
+      <md-button class="md-raised md-warn" ng-click='vm.salvarUser()' >CADASTRAR</md-button>
+      </div>
+
+</div>
+
+
+
+
+
+
+
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular-resource.js"></script> 
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular-animate.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular-aria.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular-messages.min.js"></script>
+
+  <!-- Angular Material Library -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.8/angular-material.min.js"></script>
+  
+  <script type="text/javascript">
+    angular.module('appUser', ['ngMaterial', 'ngMessages', 'ngResource'])
+  </script>
+    <script src="./user.controller.js"></script>
+</body>
+</html>
